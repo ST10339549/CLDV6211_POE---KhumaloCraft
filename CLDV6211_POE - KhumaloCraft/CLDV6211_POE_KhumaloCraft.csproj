@@ -4,7 +4,7 @@
     <TargetFramework>net8.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
-    <RootNamespace>CLDV6211_POE___KhumaloCraft</RootNamespace>
+    <RootNamespace>CLDV6211_POE_KhumaloCraft</RootNamespace>
   </PropertyGroup>
 
 </Project>

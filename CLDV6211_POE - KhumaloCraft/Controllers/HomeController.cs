@@ -1,8 +1,8 @@
-using CLDV6211_POE___KhumaloCraft.Models;
+using CLDV6211_POE_KhumaloCraft.Models;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 
-namespace CLDV6211_POE___KhumaloCraft.Controllers
+namespace CLDV6211_POE_KhumaloCraft.Controllers
 {
   public class HomeController : Controller
   {
@@ -18,9 +18,14 @@ namespace CLDV6211_POE___KhumaloCraft.Controllers
       return View();
     }
 
-    public IActionResult Privacy()
+    public IActionResult About()
     {
-      return View();
+        return View();
+    }
+
+    public IActionResult Contact()
+    {
+        return View();
     }
 
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

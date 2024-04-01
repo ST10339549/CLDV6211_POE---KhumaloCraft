@@ -1,0 +1,33 @@
+﻿@model IEnumerable<CLDV6211_POE_KhumaloCraft.Models.Crafts>  // Replace "YourProjectName" with your actual project name
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>My Work</title>
+</head>
+<body>
+    <h2>My Work</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Description</th>
+                <th>Image</th>
+                <th>Price</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var craftwork in Model)
+            {
+                <tr>
+                    <td>@craftwork.Name</td>
+                    <td>@craftwork.Description</td>
+                    <td><img src="@craftwork.ImageUrl" alt="@craftwork.Name" width="100" /></td>
+                    <td>@craftwork.Price</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</body>
+</html>

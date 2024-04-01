@@ -1,4 +1,4 @@
-namespace CLDV6211_POE___KhumaloCraft.Models
+namespace CLDV6211_POE_KhumaloCraft.Models
 {
   public class ErrorViewModel
   {
