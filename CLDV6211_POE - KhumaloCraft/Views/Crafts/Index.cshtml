@@ -1,4 +1,5 @@
-﻿@model IEnumerable<CLDV6211_POE_KhumaloCraft.Models.Crafts>  // Replace "YourProjectName" with your actual project name
+﻿@using System.Globalization
+@model IEnumerable<CLDV6211_POE_KhumaloCraft.Models.Crafts>
 
 <!DOCTYPE html>
 <html>
@@ -8,26 +9,22 @@
 </head>
 <body>
     <h2>My Work</h2>
-    <table>
-        <thead>
-            <tr>
-                <th>Name</th>
-                <th>Description</th>
-                <th>Image</th>
-                <th>Price</th>
-            </tr>
-        </thead>
-        <tbody>
+    <div class="container">
+        <div class="row">
             @foreach (var craftwork in Model)
             {
-                <tr>
-                    <td>@craftwork.Name</td>
-                    <td>@craftwork.Description</td>
-                    <td><img src="@craftwork.ImageUrl" alt="@craftwork.Name" width="100" /></td>
-                    <td>@craftwork.Price</td>
-                </tr>
+                <div class="col-md-4">
+                    <div class="card mb-4">
+                        <img class="card-img-top" src="@craftwork.ImageUrl" alt="@craftwork.Name" />
+                        <div class="card-body">
+                            <h5 class="card-title">@craftwork.Name</h5>
+                            <p class="card-text">@craftwork.Description</p>
+                            <h5 class="card-title">@craftwork.Price.ToString("C", new CultureInfo("en-ZA"))</h5>
+                        </div>
+                    </div>
+                </div>
             }
-        </tbody>
-    </table>
+        </div>
+    </div>
 </body>
 </html>
